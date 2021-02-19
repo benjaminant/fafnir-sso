@@ -1,7 +1,8 @@
 plugins {
-    id 'io.codearte.nexus-staging' version '0.21.2'
+    id 'io.codearte.nexus-staging' version '0.22.0'
     id 'java'
-    id 'org.sonarqube' version '3.0' apply false
+    id 'org.sonarqube' version '3.1.1' apply false
+    id "name.remal.check-updates" version "1.2.2"
 }
 
 subprojects {

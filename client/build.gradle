@@ -9,6 +9,7 @@ buildscript {
 
 plugins {
     id "java-library"
+    id "name.remal.check-updates"
 //    id "org.springframework.boot" version "2.2.4.RELEASE"
 //    id "io.spring.dependency-management" version "1.0.9.RELEASE"
 }
@@ -31,20 +32,20 @@ if ((myVersion?.trim())){
 }
 
 dependencies {
-    compileOnly "org.projectlombok:lombok:1.18.10"
+    compileOnly "org.projectlombok:lombok:1.18.18"
     compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
 
     implementation "io.vavr:vavr:0.10.2"
     implementation "io.jsonwebtoken:jjwt:0.9.1"
-    implementation 'com.hazelcast:hazelcast:4.0.1'
+    implementation 'com.hazelcast:hazelcast:4.1.1'
 
-    implementation 'org.bouncycastle:bcprov-jdk15on:1.67'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.68'
 
-    implementation 'org.springframework:spring-context:5.2.8.RELEASE'
-    implementation 'org.springframework.security:spring-security-web:5.3.4.RELEASE'
+    implementation 'org.springframework:spring-context:5.3.4'
+    implementation 'org.springframework.security:spring-security-web:5.4.5'
 
-    annotationProcessor "org.projectlombok:lombok:1.18.10"
-    annotationProcessor "io.vavr:vavr:0.10.2"
+    annotationProcessor "org.projectlombok:lombok:1.18.18"
+    annotationProcessor "io.vavr:vavr:0.10.3"
 }
 
 apply plugin: 'com.bmuschko.nexus'
