@@ -81,4 +81,8 @@ public class TokenFactory {
 	public PrivateKey getPrivateKey() {
 		return keys.getPrivate();
 	}
+
+	public KeyPair getKeys() {
+		return keys;
+	}
 }

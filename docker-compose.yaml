@@ -3,8 +3,11 @@ services:
   fafnir-sso:
     build: webservice
     container_name: fafnir-sso
+    expose:
+      - 8080
     ports:
       - 8080:8080
+      - 6001:6001
     environment:
       - FAFNIR_SUCCESS=http://localhost:8080/loginredirect
       - FAFNIR_FAILURE=http://localhost:8080/loginerror
@@ -13,3 +16,15 @@ services:
       - MITID_AID=c831a44a-81c4-4ca7-97aa-21f4c5e15b4a
       - MITID_SECRET=a6MJQNl2d5nPdplyLz0JPOI3kvnp2sP6Mr5dBOLfmxSnuZ/Z/ZdHfwu0QLHzkI/6UPWOo/RuQjsTHlKoXmSuaQ==
       - MITID_AUTHORITY_URL=https://brokertest.signaturgruppen.dk/op
+
+  simplesaml:
+    image: kristophjunge/test-saml-idp
+    container_name: simplesaml
+    ports:
+      - 8081:8080
+    expose:
+      - 8080
+      - 8443
+    environment:
+      - SIMPLESAMLPHP_SP_ENTITY_ID=simplesaml
+      - SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost:8080/login/saml2/sso/simplesaml
