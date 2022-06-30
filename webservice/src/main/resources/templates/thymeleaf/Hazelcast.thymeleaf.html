@@ -218,6 +218,7 @@
         margin-top: 4rem;
         font-family: "Poppins", sans-serif;
         font-size: small;
+        font-weight:400 ;
         background-color: #ff003e;
         width: 80%;
         letter-spacing: 1px;
@@ -520,6 +521,9 @@
         .right-side {
           display: none;
         }
+        .left-side{
+          background: black;
+        }
         .container .inner-content {
         
           width: 100%;
@@ -565,9 +569,11 @@
       }
       .inner-content-positioner{align-self:center;height: 70%;}
       .splitscreen{
-
-margin-top:0px;
-}
+        margin-top:0px;
+      }
+      .container .inner-content {
+        border-radius: 0;
+      }
       }
     </style>
   </head>
@@ -581,8 +587,8 @@ margin-top:0px;
         <div class="content">
           <div class="inner-content">
             <div class="inner-content-positioner">
-              <img class="logo" id='logo_white' alt="Selfcast" src="./logo_white.png" />
-               <img class="logo" id='logo_black' alt="Selfcast" src="./logo_black.png" />
+              <img class="logo" id='logo_white' alt="Selfcast" src="logo_white.png" />
+               <img class="logo" id='logo_black' alt="Selfcast" src="logo_black.png" />
               <h1 class="title">Welcome back</h1>
               <p class="subtitle">
                 Welcome! Please fill in your email and password to login to your
