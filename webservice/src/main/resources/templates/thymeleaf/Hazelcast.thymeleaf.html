@@ -217,7 +217,8 @@
       .submitButton {
         margin-top: 4rem;
         font-family: "Poppins", sans-serif;
-        font-size: small;
+        height: 5vh;
+        font-size: 1.4vh;
         font-weight:400 ;
         background-color: #ff003e;
         width: 80%;
@@ -246,8 +247,10 @@
       form {
         height: 80%;
         position: relative;
-        padding: 8px;
+   
         min-width: 288px;
+        padding-right: 3vh;
+        padding-left: 3vh;
       }
       form label {
         display: block;
@@ -258,7 +261,7 @@
         margin: 0 0 1rem 0;
         padding: 8px 0 0 0;
         font-weight: 200;
-        font-size: 14px;
+        font-size: 1.2vh;
       }
       form input {
         border-radius: 7.5px;
@@ -353,31 +356,44 @@
         position: relative;
       }
       .container .inner-content {
+       overflow-y: scroll;
         z-index: 3;
-        display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
         background-color: white;
         width: 70%;
         height: 80%;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 6rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
         padding-bottom: 2rem;
         box-shadow: -6px 8px 8px 8px #00000036;
         border-radius: 16px;
       }
+      ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  margin-right: 12px;
+}
+.inner-content-positioner{
+  height: -webkit-fill-available;
+ 
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  margin-right: 12px;
+}
       .logo {
-          
-        position: absolute;
         top: 2rem;
         right: 2rem;
-        width: 10%;
+        width: 6vh;
         min-width: 60px;
       }
       .inputs {
-        display: inline-block;
+     
         background: transparent;
         border-bottom: none;
       }
@@ -387,13 +403,14 @@
         justify-content: space-between;
         width: 100%;
         height: 48px;
-        margin-top: 32px;
+        margin-top: 4vh;
       }
 
       .splitscreen .left {
         flex: 1;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        padding-bottom: 0.4vh;
         justify-content: flex-start;
         border-bottom: 2px solid rgba(120, 120, 120, 0.74);
       }
@@ -426,8 +443,8 @@
       .right-side h1 {
         font-family: "Lato", sans-serif;
         text-transform: uppercase;
-        font-size: 4rem;
-        line-height: 4rem;
+        font-size: 8vh;
+        line-height: 8vh;
         font-weight: 900;
         color: #ffffff;
         letter-spacing: 0.4rem;
@@ -435,7 +452,7 @@
       }
 
       .title {
-        font-size: 2.4rem;
+        font-size: 4.4vh;
         font-weight: 500;
         line-height: 1.5;
         margin: 1vh;
@@ -443,15 +460,31 @@
         margin-bottom: 1rem;
       }
       .subtitle {
-        margin: 0;
-        padding-bottom: 2rem;
+        margin: auto;
+        padding-bottom: 3rem;
        
-        font-size: medium;
+        font-size: 1.6vh;
         color: #5a5959;
         text-align: center;
         padding-left: 3rem;
         padding-right: 3rem;
-        line-height: 1.1rem;
+        line-height: 1.8vh;
+      }
+       .password-wrapper{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+         }
+      .password {
+      text-decoration: none;
+        margin: 0;
+        padding-bottom: 2rem;
+        font-size: 1.6vh;
+        color: #5a5959;
+        text-align: center;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        line-height: 1.8vh;
       }
       .button-wrapper {
         width: 100%;
@@ -459,6 +492,8 @@
         justify-content: center;
         align-items: center;
         max-height: 120px;
+            margin-top: 5vh;
+    margin-bottom: 5vh
       }
       #overlay {
         position: absolute; /* Sit on top of the page content */
@@ -479,18 +514,29 @@
         cursor: pointer; /* Add a pointer on hover */
       }
       input::-webkit-input-placeholder {
-        font-size: 15px;
+        font-size: 1.4vh;
         color: #b2b2b2;
         text-align: center;
         margin-right: 16px;
       }
-      .input-wrapper{margin: 0 auto; width:85%}
-         #logo_black{display: block;}
-           #logo_white{display: none;}
-       @media screen and (max-width: 1480px) {
-        .logo {
-          display: none;
+      .input-wrapper{   
+    justify-content: center;
+    flex-direction: column;
+}
+        #logo_black{display: block;}
+        #logo_white{display: none;}
+        .logo-wrapper{
+         display: flex;
+         justify-content: flex-end;
+         width: 100%;
+         padding-top: 1rem;
+         padding-bottom: 1rem;
         }
+         #envelope-icons{width: 16%; color: #ff003e; font-size:2.2vh;margin-bottom: 0.4vh;}
+         #lock-icons{width: 16%; color: #ff003e; font-size:2.8vh;}
+        
+       @media screen and (max-width: 1480px) {
+       
         .title {
           font-size: 5vh;
           margin-bottom: 1rem;
@@ -513,8 +559,20 @@
         }
       }
       @media screen and (max-width: 850px) {
+         .password-wrapper{
+           display: none;
+          
+         }
+       .splitscreen .left{
+          padding-bottom: 1.2vh;
+        }
+         .logo-wrapper{
+           padding-top: 0;
+     margin-bottom: 4rem;
+        }
         .logo {
           display: block;
+          right: 8rem;
         }
           #logo_black{display: none;}
            #logo_white{display: block;}
@@ -547,6 +605,14 @@
           color: #7b8993;
           max-width: 400px;
         }
+           .password {
+          line-height: 1.3rem;
+          font-size: 1.1rem;
+          padding: 8px;
+          margin-bottom: 3rem;
+          color: #7b8993;
+          max-width: 400px;
+        }
         label{
           color:#7b8993;
         }
@@ -561,6 +627,7 @@
         }
         .submitButton {
           width: 100%;
+
         }
         input::-webkit-input-placeholder {
        font-size: 14px;
@@ -574,6 +641,7 @@
       .container .inner-content {
         border-radius: 0;
       }
+     
       }
     </style>
   </head>
@@ -587,8 +655,10 @@
         <div class="content">
           <div class="inner-content">
             <div class="inner-content-positioner">
-              <img class="logo" id='logo_white' alt="Selfcast" src="https://d15vsuqxaxnhjk.cloudfront.net/icons/logo_white.png" />
-               <img class="logo" id='logo_black' alt="Selfcast" src="https://d15vsuqxaxnhjk.cloudfront.net/icons/logo_black.png" />
+            <div class="logo-wrapper">
+              <img class="logo" id='logo_white' alt="Selfcast" src="logo_white.png" />
+               <img class="logo" id='logo_black' alt="Selfcast" src="logo_black.png" />
+            </div>
               <h1 class="title">Welcome back</h1>
               <p class="subtitle">
                 Welcome! Please fill in your email and password to login to your
@@ -599,10 +669,12 @@
                   <div class="splitscreen">
                     <div class="left">
                       <i
+                       id="envelope-icons"
                         class="fa fa-envelope"
-                        style="width: 16%; font-size: 24px; color: #ff003e"
+                        style="width: 16%; color: #ff003e; font-size:2.2vh;"
                       ></i>
                     </div>
+                  
                     <div class="right">
                       <input
                         class="inputs"
@@ -614,13 +686,14 @@
                     </div>
                   </div>
                   <label> EMAIL ADDRESS </label>
-                  <div style="height: 2rem"></div>
+
                   <div>
                   <div class="splitscreen">
                     <div class="left">
                       <i
+                      id="lock-icons"
                         class="fa fa-lock"
-                        style="width: 16%; font-size: 32px; color: #ff003e"
+                      
                       ></i>
                     </div>
                     <div class="right">
@@ -632,6 +705,7 @@
                         placeholder="Enter your password  "
                       />
                     </div>
+                   
                   </div>
                   <label> PASSWORD </label>
                 </div>
@@ -640,9 +714,10 @@
                     Login
                   </button>
                 </div>
-                 <p class="subtitle">
+                <div class="password-wrapper">
+                 <a href="https://test-producer.selfcast.com/password/recovery" class="password">
                Forgot password?
-              </p>
+                 </a></div>
               </form>
             </div>
           </div>
