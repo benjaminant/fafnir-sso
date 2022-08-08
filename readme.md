@@ -1,4 +1,4 @@
-Fafnir-SSO
+Fafnir-SSO - Benjamin Selfcast Version
 ===
 Fafnir-SSO is an SSO provider, which provides a Single Sign On functionality based on industry standards and best
 practices, using 3rd party providers Fafnir generates JWT's which can be used uniformly by web applications in a
@@ -14,7 +14,7 @@ Fafnir-SSO supports the following Authentication providers:
 * Economic customers
 * LinkedIn
 * Hazelcast (Username/Password)
-* MitID
+* MitID 
 * Microsoft Identity
 
 Authentication Tokens
